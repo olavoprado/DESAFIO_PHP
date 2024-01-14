@@ -1,0 +1,37 @@
+Banco de Dados Mysql:
+	
+	
+	CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(200) NOT NULL,
+  `idade` int(11) NOT NULL,
+  `cidade` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `clientes` (`id`, `nome`, `idade`, `cidade`) VALUES
+(3, 'alice', 14, 'gravatai'),
+(4, 'teste2', 23, 'viamão');
+
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(30) NOT NULL,
+  `senha` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `usuarios` (`id`, `usuario`, `senha`) VALUES
+(1, 'olavo.prado', '81dc9bdb52d04dc20036dbd8313ed055');
+
+
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id`);
+  
+  ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+  
+  ALTER TABLE `clientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  
+  ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
